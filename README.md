@@ -4,3 +4,5 @@ The application is multpage for the different organisation departments to provid
 The analytics can help in faster decision making and planning.
 The home page is an entry to the application with general overview of the organisation data analytic approach(The analytics types and methods used)
 
+Each page is divided into 3 sections of columns to display the analytics.
+
