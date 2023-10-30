@@ -52,13 +52,13 @@ st.markdown(slogan_html, unsafe_allow_html=True)
 
 
 # Connect to MongoDB
-client = pymongo.MongoClient("mongodb+srv://rssebambulidde:19Sseba15@cluster1.bak1r58.mongodb.net/")
+client = pymongo.MongoClient("")
 
 # Access a database
-db = client["Pride_Microfinance"]
+db = client[""]
 
 # Access a collection
-collection = db["Disbursements"]
+collection = db[""]
 
 # high level filter of data
 df = pd.DataFrame(list(collection.find()))
