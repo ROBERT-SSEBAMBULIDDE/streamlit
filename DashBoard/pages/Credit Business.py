@@ -8,9 +8,13 @@ import streamlit as st
 import pandas as pd
 import pymongo
 
-# Create a continuously moving announcement bar
-announcement = ("Announcement: We are offering special credit rates \n"
-                "this month! Contact us for details. ")  # Repeat for continuous scrolling
+import streamlit as st
+
+# Set the page configuration for a wider layout
+st.set_page_config(layout="wide")   
+
+# Create a continuously moving announcement bar with green and light blue text
+announcement = "Announcement: We are offering special credit rates this month! Contact us for details."
 st.markdown(
     f"""
     <style>
@@ -35,18 +39,13 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# create a left aligned header in green color,bold font size 24px,left aligned,h1 heading
-header_html = ('\n'
-               '    <h1 style="font-size: 30px; color: green; font-weight: \n'
-               'bold; text-align: left;">Credit Business Analytics</h1>\n')
-st.markdown(header_html, unsafe_allow_html=True)
+# Create a left-aligned header in green color, bold font size 30px, and left-aligned h1 heading
+st.markdown("<h1 style='font-size: 40px; color: green; font-weight: bold; text-align: left;'>Credit Business Analytics</h1>", unsafe_allow_html=True)
+# Create a left-aligned header in light blue color, bold font size 24px, and left-aligned h2 heading
+st.markdown("<h2 style='font-size: 24px; color: lightblue; font-weight: bold; text-align: left;'>Credit Business Insights</h2>", unsafe_allow_html=True)
 
-# Create slogan of subheading with light blue color,bold font size 24px,centered,h2 heading
-slogan_html = """
-<h2 style="font-size: 24px; color: lightblue; font-weight: bold; text-align: \n
-center;">Navigating Credit with Analytics Expertise</h2>
-"""
-st.markdown(slogan_html, unsafe_allow_html=True)
+
+
 
 # Connecting to MongoDB database
 
