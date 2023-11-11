@@ -45,19 +45,16 @@ st.markdown("<h1 style='font-size: 40px; color: green; font-weight: bold; text-a
 st.markdown("<h2 style='font-size: 24px; color: lightblue; font-weight: bold; text-align: left;'>Credit Business Insights</h2>", unsafe_allow_html=True)
 
 
+# Connect to the MongoDB database using.env file
+import pymongo
+import os
+from dotenv import load_dotenv
 
-
-# Connecting to MongoDB database
-
-
-# Connect to MongoDB
-client = pymongo.MongoClient("")
-
-# Access a database
-db = client[""]
-
-# Access a collection
-collection = db[""]
+# Load environment variables from .env file
+load_dotenv()
+client = pymongo.MongoClient(os.getenv("url"))
+db = client[os.getenv("db")]
+collection = db[os.getenv("collection")]    
 
 # high level filter of data
 df = pd.DataFrame(list(collection.find()))
